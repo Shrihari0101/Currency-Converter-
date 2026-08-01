@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Convert</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <div class="title">
+    Currency Converter
+    <span class="dot" id="dot" title="Live rate status"></span>
+  </div>
+
+  <label>Amount</label>
+  <div class="field">
+    <input id="fromAmount" type="number" inputmode="decimal" value="1" min="0" step="any" />
+    <select id="fromCurrency"></select>
+  </div>
+
+  <div class="swap-row">
+    <button class="swap-btn" id="swapBtn" aria-label="Swap currencies">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="17 1 21 5 17 9"></polyline>
+        <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+        <polyline points="7 23 3 19 7 15"></polyline>
+        <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+      </svg>
+    </button>
+  </div>
+
+  <label>Converted</label>
+  <div class="field">
+    <input id="toAmount" type="text" readonly value="0" />
+    <select id="toCurrency"></select>
+  </div>
+
+  <div class="rate-line" id="rateLine">—</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
